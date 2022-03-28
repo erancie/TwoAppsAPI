@@ -1,7 +1,9 @@
 const express = require('express');
 const axios = require("axios").default;
+require('dotenv').config()
 
 const app = express();
+
 
 //------------------------------------- 
 
@@ -23,20 +25,21 @@ app.listen(3000, () => {
 });
 
 
-//RAPID API EG.
+// //RAPID API EG.
 // var options = {
 //   method: 'GET',
 //   url: 'https://dad-jokes.p.rapidapi.com/random/joke',
 //   headers: {
 //     'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com',
-//     'X-RapidAPI-Key': '11c150e928mshf52d576699cc12ap1ae020jsnb267af58de8a'
+//     'X-RapidAPI-Key': process.env.RapidAPI_Key
 //   }
 // };
 
 // axios.request(options).then(function (response) {
 //     let joke = response.data;
+//     // console.log(joke)
 //     console.log(joke.body[0].setup)
-//     console.log(joke.body[0].punch)
+//     console.log(joke.body[0].punchline)
 //   }).catch(function (error) {
 //     console.error(error);
 // });
